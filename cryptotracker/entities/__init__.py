@@ -1,0 +1,1 @@
+from .coin_market_cap_global import CoinMarketCapGlobalEntity

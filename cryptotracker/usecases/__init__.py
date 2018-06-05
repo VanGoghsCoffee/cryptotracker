@@ -1,0 +1,2 @@
+from .coin_market_cap_global_interactor import fill_global_entity_from_api_response
+
