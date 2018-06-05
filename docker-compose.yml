@@ -1,0 +1,7 @@
+version: '2'
+services:
+  cryptotracker:
+    image: cryptotracker
+    command: python app.py
+    ports:
+      - "3005:3005"
