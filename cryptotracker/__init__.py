@@ -1,4 +1,5 @@
 from flask import Flask, request
+from flask_cors import cross_origin
 import json
 import requests
 from .entities import CoinMarketCapGlobalEntity
@@ -16,6 +17,7 @@ def getRoot():
 
 
 @app.route("/coinmarketcap", methods=["GET"])
+@cross_origin()
 def get_coin_market_cap():
     response = requests.get(global_api).json()
     entity = fill_global_entity_from_api_response(
